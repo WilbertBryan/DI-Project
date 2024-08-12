@@ -248,24 +248,27 @@ svg{
     }
 
     .btnSelengkapnya {
-        margin: 0 auto; /* Center button for smaller screens */
-        padding-left: 12px;
+        margin: 0 auto; /* Center button horizontally */
+        display: block; /* Ensure block-level for centering */
+        width: fit-content; /* Shrink width to fit content */
     }
 }
 
-/*Home - Info*/
+
+/* Home - Info */
 #informasi {
     padding: 80px 20px;
+    background-color: #ffffff;
 }
 
-.informasi-awalan h1{
+.informasi-awalan h1 {
     font-size: 32px;
     font-weight: 600;
     color: var(--BaseBlue);
     text-align: center;
 }
 
-.informasi-awalan p{
+.informasi-awalan p {
     font-size: 16px;
     color: black;
     text-align: center;
@@ -275,9 +278,11 @@ svg{
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
+
 
 .info-isiBox {
     background: #FFFFFF;
@@ -295,16 +300,14 @@ svg{
     align-items: center;
 }
 
-.info-isiBox:hover{
+.info-isiBox:hover {
     transform: translateY(-5px);
 }
 
 .info-isiBox img {
     width: 60px;
     height: 60px;
-    margin-top: 30px;
-    text-align: center;
-
+    margin: 0 auto 30px auto;
 }
 
 .info-isiBox h3 {
@@ -318,32 +321,36 @@ svg{
 .info-isiBox p {
     margin-top: 4px;
     font-size: 14px;
-    align-self: flex-start;
+    text-align: left;
+    width: 100%;
+    margin-top: 10px;
+
 }
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
     .info-isiBox {
-        width: calc(33.33% - 20px); /* Three items per row */
+        width: calc(33.33% - 20px);
     }
 }
 
 @media (max-width: 768px) {
     .info-isiBox {
-        width: calc(50% - 20px); /* Two items per row */
+        width: calc(50% - 20px);
     }
 }
 
 @media (max-width: 480px) {
     .info-isiBox {
-        width: 100%; /* One item per row */
+        width: 100%;
     }
 }
+
 
 /* Home - Info Terbaru */
 #info-terbaru {
     padding: 100px 20px;
-    background-color: #f9f9f9;
+    background-color:   #ffffff;
 }
 
 .info-box {

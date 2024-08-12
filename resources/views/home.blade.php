@@ -205,16 +205,6 @@
         </div>
     </section>
 
-
-
-
-
-
-
-
-
-
-
     <!-- Footer -->
     <footer class="text-center text-lg-start text-white" style="background-color: #1C4CE1;">
         <!-- Grid container -->
