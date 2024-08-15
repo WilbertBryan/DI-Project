@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Home</title>
+    <title>Kritik & Saran</title>
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css"/>
 </head>
@@ -31,10 +31,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto">
-                        <a class="nav-item nav-link home-link active" href="/" >Home</a>
+                        <a class="nav-item nav-link home-link" href="/" >Home</a>
                         <a class="nav-item nav-link info-link" href="/info">Info</a>
                         <a class="nav-item nav-link tentangkami-link" href="/tentangkami" >Tentang Kami</a>
-                        <a class="nav-item nav-link kritik&saran-link" href="/kritiksaran">Kritik & Saran</a>
+                        <a class="nav-item nav-link kritik&saran-link active" href="/kritiksaran">Kritik & Saran</a>
                     </div>
                     <div class="navbar-nav ms-auto">
                         <a class="nav-item nav-link" href="#">Masuk</a>
@@ -50,155 +50,30 @@
         <div class="centered2">Eternal Growth In Unity</div>
     </section>
 
-    <!-- Home -->
-    <section id = "tentangkita">
-        <div class = "tentangkita-left">
-            <img src = "./image/tentangkita.png" alt = "logo tentangkita">
-        </div>
-        <div class = "tentangkita-right">
-            <h4>Tentang Kita</h4>
-            <h2>Kabinet Synergia</h2>
-            <p> Mendorong setiap mahasiswa/mahasiswi untuk menjadi versi terbaik dari diri mereka masing-masing melalui program-program yang kami buat </p>
-            <button href = "/" class = "btnSelengkapnya">Selengkapnya</button>
-        </div>
-    </section>
 
-    <!-- Informasi/Fitur -->
-    <section id="informasi">
-        <div class="informasi-awalan">
-            <h1>Ingin Tahu Lebih Lanjut?</h1>
-            <p>Yuk kita lihat informasi apa saja yang tersedia</p>
-        </div>
-        <div class="home-container">
-            <a href="/" class="info-isiBox">
-                <img src="./image/medali.png" alt="Icon Medali">
-                <h3>Info Lomba</h3>
-                <p>Seputar informasi terkait lomba-lomba terkini</p>
-            </a>
-            <a href="/" class="info-isiBox">
-                <img src="/image/announce.png" alt="Icon Announce">
-                <h3>Info Proker</h3>
-                <p>Seputar informasi terkait informasi dan pengumuman proker.</p>
-            </a>
-            <a href="/" class="info-isiBox">
-                <img src="/image/medali.png" alt="Icon Medali">
-                <h3>Prestasi</h3>
-                <p>Seputar informasi terkait mahasiswa dan mahasiswi berprestasi pada ISB.</p>
-            </a>
-            <a href="/" class="info-isiBox">
-                <img src="/image/announce.png" alt="Icon Announce">
-                <h3>Open Recruitment</h3>
-                <p>Seputar informasi terkait Pendaftaran proker dan pengumuman proker.</p>
-            </a>
-        </div>
-        <div class="yellow-line">
-        </div>
-    </section>
+    <!-- Form Kritik Saran -->
+    <div class="kritikSaran-title">
+        <h1>Kritik & Saran</h1>
+    </div>
 
-    <!-- Home- info terbaru -->
-    <section id="info-terbaru">
-        <div class="info-box">
-            <h2>Info Terbaru</h2>
-
-            <div class="grid-3">
-            <!-- 1 -->
-                <div class="info">
-                    <div class ="info-gambar">
-                    <img src="./image/portfolio-1.png" alt="gambar 1" />
-                    </div>
-                    <a href = "/" class = "info-link">
-                        <div class="info-isi">
-                            <div class="info-jenis">
-                                <div>Lomba</div>
-                            </div>
-                            <div class="info-judul">
-                                <h3>Lomba A 2024</h3>
-                            </div>
-                            <p>
-                            Junior Dev Internship – PT Madtive Studio
-                            Indonesia   📌Min. 4th Year College Student 📌 Job
-                            Description :…
-                            </p>
-                        </div>
-                    </a>
+    <section id="kritikSaran">
+        <div class="kritikSaran-boxes">
+            <form class="kritikSaranForm" action="">
+                <div>
+                    <input type="text" placeholder="Nama" name="name">
                 </div>
-
-            <!-- 2 -->
-            <div class="info">
-                <div class ="info-gambar">
-                <img src="./image/portfolio-2.png" alt="gambar 2" />
+                <div>
+                    <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="10"
+                    placeholder="Tulis pesan..."></textarea>
                 </div>
-                <a href = "/" class = "info-link">
-                    <div class="info-isi">
-                        <div class="info-jenis">
-                            <div>Berita</div>
-                        </div>
-                        <div class="info-judul">
-                            <h3>Berita B 2024</h3>
-                        </div>
-                        <p>
-                            Datathon 2024 adalah kompetisi sains data yang
-                            diselenggarakan oleh Riset dan Teknologi
-                            (RISTEK) Fakultas Ilmu Komputer Universitas
-                            Indonesia. Kompetisi…
-                        </p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- 3 -->
-            <div class="info">
-                <div class ="info-gambar">
-                <img src="./image/portfolio-3.jpeg" alt="gambar 3" />
+                <div>
+                    <button class="btn-submit" type="button">Kirim</button>
                 </div>
-                <a href = "/" class = "info-link">
-                    <div class="info-isi">
-                        <div class="info-jenis">
-                            <div>Proker</div>
-                        </div>
-                        <div class="info-judul">
-                            <h3>Proker C 2024</h3>
-                        </div>
-                        <p>
-                            Menjadi programmer yang andal tidak hanya
-                            tentang menguasai bahasa pemrograman, tetapi
-                            juga tentang mengembangkan keterampilan
-                            analitis, memecahkan masalah, dan…
-                        </p>
-                    </div>
-                </a>
-            </div>
-            </div>
-        </div>
-        <div class="yellow-line">
-        </div>
-    </section>
-
-    <!-- Home - Apresiasi -->
-    <section id = "apresiasi">
-
-        <div class = "judul-apresiasi">
-        <h2>Apresiasi</h2>
-        <div class="card-apresiasi">
-        <div class="apresiasi-left">
-            <img src = "./image/apresiasi.png" alt = "apresiasi-1" />
-        </div>
-        <div class="apresiasi-right">
-            <img src = "./image/apresiasi.png" alt = "apresiasi-2" />
-        </div>
-        </div>
-        </div>
-        <div class="yellow-line">
-        </div>
-    </section>
-
-    <!-- Home - Konten Terbaru -->
-    <section id = "konten-terbaru">
-        <div class = "judul-konten">
-            <h2>Konten Terbaru</h2>
-            <div class = "isi-konten">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/XqZsoesa55w?si=SfIX3N8I4bOTlqKH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+            </form>
         </div>
     </section>
 
@@ -214,7 +89,7 @@
             <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
                 <img src="{{asset('/image/footer-logo.png')}}" alt="" style="width: 100%; height: auto;" class="logo">
                 <p style="font-size: 12px;">
-                Kami berkomitmen untuk memberikan kesempatan yang setara kepada seluruh mahasiswa/mahasiswi ISB untuk dapat berkreasi dan berinovasi.
+                Kami berkomitmen untuk memberikan kesempatan yang setara kepada seluruh mahasiswa/mahasiswi ISB untuk dapat berkreasi dan berinovasi. 
                 </p>
             </div>
             <!--Grid column-->
