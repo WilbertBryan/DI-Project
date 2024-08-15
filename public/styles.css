@@ -1,3 +1,21 @@
+:root {
+    --BaseBlue: #1C4CE1;
+    --BaseWhite: #FFFFFF;
+    --YellowLine: #ECD806;
+    --description: #5A5A5A;
+}
+
+.yellow-line {
+    width: 30%;
+    height: 5px;
+    background-color: var(--YellowLine);
+    text-align: center;
+    border-radius: 6px;
+    margin: 200px auto 0;
+}
+a {
+    text-decoration: none;
+}
 body{
     font-family: "Poppins", sans-serif;
 }
