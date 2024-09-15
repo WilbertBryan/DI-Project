@@ -13,100 +13,141 @@
     border-radius: 6px;
     margin: 200px auto 0;
 }
+
 a {
     text-decoration: none;
 }
-body{
+
+body {
     font-family: "Poppins", sans-serif;
 }
+
 .navbar-nav .nav-link {
     margin-right: 15px;
 }
+
 .logo {
     margin-left: -26px;
 }
-.ms-auto{
-    margin-right:40px;
+
+.ms-auto {
+    margin-right: 40px;
 }
-.nav-item, h5{
+
+.nav-item,
+h5 {
     color: #FFFFFF;
     font-weight: 600;
 }
+
 .navbar-nav .nav-link.active {
     position: relative;
     color: white;
 }
+
 @media (max-width: 1165px) {
     .navbar-collapse .navbar-nav .nav-link {
         margin-bottom: 5px;
         margin-left: 40px;
     }
 }
+
 /* Change the color of the navbar toggle icon */
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+
 /* Remove border */
 .navbar-toggler {
-    border: none; /* Remove border */
-    box-shadow: none; /* Remove box shadow */
-    outline: none; /* Remove outline */
+    border: none;
+    /* Remove border */
+    box-shadow: none;
+    /* Remove box shadow */
+    outline: none;
+    /* Remove outline */
 }
+
 /* Apply the underline effect on hover */
 .navbar-nav .nav-link {
-    text-decoration: none; /* Remove default underline */
+    text-decoration: none;
+    /* Remove default underline */
     position: relative;
-    color:#FFFFFF;
+    color: #FFFFFF;
 }
+
 /* Change border color on focus or active state */
-.navbar-toggler:focus, .navbar-toggler:active {
-    border: 2px solid #FFFFFF; /* Change to white border on focus/active */
-    box-shadow: none; /* Remove shadow if any */
-    outline: none; /* Ensure outline is removed */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    border: 2px solid #FFFFFF;
+    /* Change to white border on focus/active */
+    box-shadow: none;
+    /* Remove shadow if any */
+    outline: none;
+    /* Ensure outline is removed */
 }
 
 /* Optionally, you can also add a transition for smooth effect */
-.navbar-toggler:focus, .navbar-toggler:active {
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    transition: border-color 0.3s ease;
+    /* Smooth transition for border color */
 }
+
 /* Underline for the active navbar link */
 .navbar-nav .nav-link.active::before {
-    content: ''; /* Empty content for the pseudo-element */
+    content: '';
+    /* Empty content for the pseudo-element */
     display: block;
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 4px; /* Thickness of the underline */
-    background-color: #D9D9D9; /* Color of the underline */
+    height: 4px;
+    /* Thickness of the underline */
+    background-color: #D9D9D9;
+    /* Color of the underline */
     border-radius: 4px;
-    z-index: 1; /* Ensure the active underline is below the hover effect */
+    z-index: 1;
+    /* Ensure the active underline is below the hover effect */
 }
+
 @media (max-width: 1165px) {
     .navbar-nav .nav-link.active::before {
-    width: 0%;
+        width: 0%;
     }
 }
+
 .fullscreen-image {
-    width: 100%; /* Make the image width 100% of its container */
-    height: auto; /* Adjust height to maintain aspect ratio */
-    object-fit: contain; /* Ensure the image fits within the container without distortion */
-    display: block; /* Remove any unwanted space below the image */
+    width: 100%;
+    /* Make the image width 100% of its container */
+    height: auto;
+    /* Adjust height to maintain aspect ratio */
+    object-fit: contain;
+    /* Ensure the image fits within the container without distortion */
+    display: block;
+    /* Remove any unwanted space below the image */
 }
-@media(min-width:760px ){
+
+@media(min-width:760px) {
     .fullscreen-image {
-        width: 100%; /* Make the image width 100% of its container */
-        height: calc(100vh - 93px); /* Maintain aspect ratio fit to screen*/
-        object-fit: cover; /* Ensure the image covers the container without distortion */
-        display: block; /* Remove any unwanted space below the image */
+        width: 100%;
+        /* Make the image width 100% of its container */
+        height: calc(100vh - 93px);
+        /* Maintain aspect ratio fit to screen*/
+        object-fit: cover;
+        /* Ensure the image covers the container without distortion */
+        display: block;
+        /* Remove any unwanted space below the image */
     }
 }
+
 #home-image {
     position: relative;
     text-align: center;
 }
- /* Centered text */
-.centered1{
+
+/* Centered text */
+.centered1 {
     position: absolute;
     top: 45%;
     left: 50%;
@@ -116,7 +157,8 @@ body{
     font-weight: 600;
 
 }
-.centered2{
+
+.centered2 {
     position: absolute;
     top: 60%;
     left: 50%;
@@ -125,20 +167,26 @@ body{
     font-size: 3vw;
     font-weight: 600;
 }
+
 footer .list-unstyled li a {
-    text-decoration: none; /* Remove underline */
-    color: #FFFFFF; /* Ensure the text remains white */
+    text-decoration: none;
+    /* Remove underline */
+    color: #FFFFFF;
+    /* Ensure the text remains white */
 }
 
 footer .list-unstyled li {
-    margin-top: 10px; /* Add vertical gap between list items */
+    margin-top: 10px;
+    /* Add vertical gap between list items */
 }
-.follow-us{
+
+.follow-us {
     margin-top: 16px;
     font-size: 12px;
     font-weight: 300;
 }
-svg{
+
+svg {
     margin-right: 10px;
 }
 
@@ -214,43 +262,57 @@ svg{
 /* Responsive adjustments */
 @media (max-width: 768px) {
     #tentangkita {
-        grid-template-columns: 1fr; /* Stack columns vertically */
-        height: auto; /* Adjust height to fit content */
-        gap: 16px; /* Reduced space between items */
+        grid-template-columns: 1fr;
+        /* Stack columns vertically */
+        height: auto;
+        /* Adjust height to fit content */
+        gap: 16px;
+        /* Reduced space between items */
         margin: 0 auto;
     }
 
     .tentangkita-left {
-        justify-content: center; /* Center the image horizontally */
-        padding-left: 0; /* Remove left padding */
+        justify-content: center;
+        /* Center the image horizontally */
+        padding-left: 0;
+        /* Remove left padding */
     }
 
     .tentangkita-left img {
-        width: 80%; /* Adjust width for smaller screens */
-        max-width: none; /* Remove max-width for smaller screens */
+        width: 80%;
+        /* Adjust width for smaller screens */
+        max-width: none;
+        /* Remove max-width for smaller screens */
         justify-content: center;
     }
 
     .tentangkita-right {
-        padding: 0 20px; /* Reduce padding for smaller screens */
+        padding: 0 20px;
+        /* Reduce padding for smaller screens */
     }
 
     .tentangkita-right p {
-        padding-right: 0; /* Remove padding for smaller screens */
+        padding-right: 0;
+        /* Remove padding for smaller screens */
     }
 
     .tentangkita-right h4,
     .tentangkita-right h2,
     .tentangkita-right p,
     .tentangkita-right .btnSelengkapnya {
-        margin-bottom: 16px; /* Adjust margin for smaller screens */
-        text-align: center; /* Center text for smaller screens */
+        margin-bottom: 16px;
+        /* Adjust margin for smaller screens */
+        text-align: center;
+        /* Center text for smaller screens */
     }
 
     .btnSelengkapnya {
-        margin: 0 auto; /* Center button horizontally */
-        display: block; /* Ensure block-level for centering */
-        width: fit-content; /* Shrink width to fit content */
+        margin: 0 auto;
+        /* Center button horizontally */
+        display: block;
+        /* Ensure block-level for centering */
+        width: fit-content;
+        /* Shrink width to fit content */
     }
 }
 
@@ -349,7 +411,7 @@ svg{
 /* Home - Info Terbaru */
 #info-terbaru {
     padding: 100px 20px;
-    background-color:   #ffffff;
+    background-color: #ffffff;
 }
 
 .info-box {
@@ -488,11 +550,14 @@ svg{
 
 @media (max-width: 768px) {
     .apresiasi-container {
-        flex-direction: column; /* Stack images vertically on small screens */
+        flex-direction: column;
+        /* Stack images vertically on small screens */
     }
 
-    .apresiasi-left, .apresiasi-right {
-        margin-bottom: 20px; /* Space between stacked images */
+    .apresiasi-left,
+    .apresiasi-right {
+        margin-bottom: 20px;
+        /* Space between stacked images */
     }
 
     .apresiasi-right {
@@ -604,8 +669,210 @@ svg{
     background-color: #1432A4;
 }
 
+/* SU Details */
+.textLabelImage {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+}
+
+.textLabelImage h1 {
+    font-weight: bold;
+}
+
+.highlightS {
+    color: yellow;
+    font-weight: bold;
+}
+
+/* SU Details - DEPARTEMEN*/
+
+#detailsAll {
+    padding: 150px 50px;
+    background-color: #ffffff;
+}
+
+.detailsBox {
+    max-width: 1250px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.detailsBox h1 {
+    padding: 50px 50px;
+    font-size: 70px;
+    font-weight: bolder;
+    color: #00296B;
+}
+
+.detailsKecil {
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 400px;
+    max-height: 400px;
+}
 
 
+.detailsGambar {
+    width: 100%;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
 
+.detailsGambar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
+.detailsIsi {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.detailsJudul h4 {
+    margin: 0;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    text-align: left;
+}
+
+.detailsIsi p {
+    margin: 0;
+    font-size: 14px;
+    color: #FDC500;
+    font-weight: bold;
+    text-align: left;
+}
+
+.btnSelengkapnya {
+    display: inline-block;
+    background-color: #00509D;
+    padding: 4px 20px;
+    color: white;
+    font-size: 10px;
+    border-radius: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+    /* Include transition for color and border */
+    margin: 10px 0 0 0;
+    width: 150px;
+}
+
+.btnSelengkapnya:hover {
+    background-color: white;
+    color: #00509D;
+    border: 1.5px solid #00509D;
+}
+
+.col-padding {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* SU Details - DETAILS EACH DEPARTEMEN*/
+
+#detailsEach {
+    padding: 70px 50px;
+    background-color: #ffffff;
+}
+
+.heading-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-right: 50%;
+}
+
+.heading-line {
+    width: 25px;
+    height: 150px;
+    background-color: #00296B;
+    margin-right: 15px;
+    border-radius: 50px;
+}
+
+.heading-line-HOD {
+    width: 7px;
+    height: 150px;
+    background-color: #00296B;
+    margin-right: 15px;
+    border-radius: 50px;
+}
+
+.heading-line-PDD {
+    width: 12px;
+    height: 150px;
+    background-color: #00296B;
+    margin-right: 15px;
+    border-radius: 50px;
+}
+
+.heading-text h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #00296B;
+    margin: 0;
+}
+
+.heading-text p {
+    font-size: 14px;
+    color: #5a5a5a;
+    margin: 5px 0 0;
+    font-weight: 00;
+
+}
+
+.col-padding-member {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.members-picture img {
+    width: 100%;
+    height: auto;
+}
+
+/* SU DETAILS - PROKER DEPARTMENT */
+
+.custom-card {
+    background-color: #FDCB1A;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+
+}
+
+.custom-card h3{
+    font-weight: bold;
+    color:#00296B;
+}
+
+.custom-card p{
+    font-size: 14px;
+}
 
