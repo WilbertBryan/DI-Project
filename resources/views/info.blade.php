@@ -264,6 +264,9 @@
                             <a class="nav-link" href="#">Open Recruitment</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#">Prestasi</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#">Berita</a>
                         </li>
                     </ul>

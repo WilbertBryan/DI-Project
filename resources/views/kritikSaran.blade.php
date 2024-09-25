@@ -50,7 +50,9 @@
         <div class="centered2">Eternal Growth In Unity</div>
     </section>
 
-
+    <div class="container">
+        @include('alert')
+    </div>
     <!-- Form Kritik Saran -->
     <div class="kritikSaran-title">
         <h1>Kritik & Saran</h1>
@@ -58,7 +60,8 @@
 
     <section id="kritikSaran">
         <div class="kritikSaran-boxes">
-            <form class="kritikSaranForm" action="">
+            <form class="kritikSaranForm" method="post" action="{{route('PostKritik')}}">
+                @csrf
                 <div>
                     <input type="text" placeholder="Nama" name="name">
                 </div>
@@ -71,7 +74,7 @@
                     placeholder="Tulis pesan..."></textarea>
                 </div>
                 <div>
-                    <button class="btn-submit" type="button">Kirim</button>
+                    <button class="btn-submit" type="submit">Kirim</button>
                 </div>
             </form>
         </div>

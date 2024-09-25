@@ -1,8 +1,8 @@
 :root {
-    --BaseBlue: #1C4CE1;
-    --BaseWhite: #FFFFFF;
-    --YellowLine: #ECD806;
-    --description: #5A5A5A;
+    --BaseBlue: #1c4ce1;
+    --BaseWhite: #ffffff;
+    --YellowLine: #ecd806;
+    --description: #5a5a5a;
 }
 
 .yellow-line {
@@ -17,7 +17,6 @@
 a {
     text-decoration: none;
 }
-
 body {
     font-family: "Poppins", sans-serif;
 }
@@ -78,34 +77,27 @@ h5 {
 /* Change border color on focus or active state */
 .navbar-toggler:focus,
 .navbar-toggler:active {
-    border: 2px solid #FFFFFF;
-    /* Change to white border on focus/active */
-    box-shadow: none;
-    /* Remove shadow if any */
-    outline: none;
-    /* Ensure outline is removed */
+    border: 2px solid #ffffff; /* Change to white border on focus/active */
+    box-shadow: none; /* Remove shadow if any */
+    outline: none; /* Ensure outline is removed */
 }
 
 /* Optionally, you can also add a transition for smooth effect */
 .navbar-toggler:focus,
 .navbar-toggler:active {
-    transition: border-color 0.3s ease;
-    /* Smooth transition for border color */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
 }
 
 /* Underline for the active navbar link */
 .navbar-nav .nav-link.active::before {
-    content: '';
-    /* Empty content for the pseudo-element */
+    content: ""; /* Empty content for the pseudo-element */
     display: block;
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 4px;
-    /* Thickness of the underline */
-    background-color: #D9D9D9;
-    /* Color of the underline */
+    height: 4px; /* Thickness of the underline */
+    background-color: #d9d9d9; /* Color of the underline */
     border-radius: 4px;
     z-index: 1;
     /* Ensure the active underline is below the hover effect */
@@ -127,8 +119,7 @@ h5 {
     display: block;
     /* Remove any unwanted space below the image */
 }
-
-@media(min-width:760px) {
+@media (min-width: 760px) {
     .fullscreen-image {
         width: 100%;
         /* Make the image width 100% of its container */
@@ -145,47 +136,40 @@ h5 {
     position: relative;
     text-align: center;
 }
-
 /* Centered text */
 .centered1 {
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 5vw;
     font-weight: 600;
-
 }
-
 .centered2 {
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 3vw;
     font-weight: 600;
 }
 
 footer .list-unstyled li a {
-    text-decoration: none;
-    /* Remove underline */
-    color: #FFFFFF;
-    /* Ensure the text remains white */
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* Ensure the text remains white */
 }
 
 footer .list-unstyled li {
     margin-top: 10px;
     /* Add vertical gap between list items */
 }
-
 .follow-us {
     margin-top: 16px;
     font-size: 12px;
     font-weight: 300;
 }
-
 svg {
     margin-right: 10px;
 }
@@ -246,7 +230,7 @@ svg {
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
-    transition: .2s ease-in-out;
+    transition: 0.2s ease-in-out;
     padding: 0.5rem 1rem;
     text-align: center;
     text-decoration: none;
@@ -316,7 +300,6 @@ svg {
     }
 }
 
-
 /* Home - Info */
 #informasi {
     padding: 80px 20px;
@@ -346,8 +329,8 @@ svg {
 }
 
 .info-isiBox {
-    background: #FFFFFF;
-    border: #D9D9D9;
+    background: #ffffff;
+    border: #d9d9d9;
     width: 260px;
     border-radius: 16px;
     padding: 40px;
@@ -385,7 +368,6 @@ svg {
     text-align: left;
     width: 100%;
     margin-top: 10px;
-
 }
 
 /* Responsive adjustments */
@@ -406,7 +388,6 @@ svg {
         width: 100%;
     }
 }
-
 
 /* Home - Info Terbaru */
 #info-terbaru {
@@ -435,8 +416,8 @@ svg {
 }
 
 .info {
-    background: #FFFFFF;
-    border: 1px solid #D9D9D9;
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
     border-radius: 16px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
@@ -461,6 +442,7 @@ svg {
     align-items: center;
     overflow: hidden;
     margin-bottom: 0px;
+    background-color: #1c4ce1;
 }
 
 .info-gambar img {
@@ -468,7 +450,6 @@ svg {
     height: 100%;
     object-fit: cover;
     display: block;
-
 }
 
 .info-isi {
@@ -480,11 +461,11 @@ svg {
 
 .info-jenis div {
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 500;
     color: black;
     background-color: var(--YellowLine);
-    padding: 4px 8px;
-    border-radius: 16px;
+    padding: 2px 15px;
+    border-radius: 10px;
     display: inline-block;
 }
 
@@ -498,7 +479,6 @@ svg {
 .info p {
     font-size: 14px;
     color: var(--description);
-
 }
 
 @media (max-width: 768px) {
@@ -514,7 +494,6 @@ svg {
 /* Home - Apresiasi */
 #apresiasi {
     padding: 100px 40px;
-
 }
 
 .judul-apresiasi {
@@ -534,16 +513,18 @@ svg {
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .apresiasi-left,
 .apresiasi-right {
     flex: 1;
+    text-align: center;
 }
 
 .apresiasi-left img,
 .apresiasi-right img {
-    width: 100%;
+    width: 60%;
     height: auto;
     border-radius: 16px;
 }
@@ -556,12 +537,14 @@ svg {
 
     .apresiasi-left,
     .apresiasi-right {
-        margin-bottom: 20px;
-        /* Space between stacked images */
+        margin-bottom: 20px; /* Space between stacked images */
     }
 
     .apresiasi-right {
         margin-bottom: 0;
+    }
+    .card-apresiasi {
+        flex-direction: column; /* Stack images vertically on small screens */
     }
 }
 
@@ -603,14 +586,14 @@ svg {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 20px;
-    color: #1C4CE1;
+    color: #1c4ce1;
 }
 
 #kritikSaran {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #FFFFFF;
+    background: #ffffff;
     text-align: center;
 }
 
@@ -634,28 +617,28 @@ svg {
 .kritikSaranForm textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #D9D9D9;
+    border: 1px solid #d9d9d9;
     border-radius: 8px;
     font-size: 16px;
     resize: none;
-    background-color: #EFEFEF;
+    background-color: #efefef;
 }
 
 .kritikSaranForm input[type="text"]::placeholder,
 .kritikSaranForm textarea::placeholder {
-    color: #AEAEAE;
+    color: #aeaeae;
 }
 
 .kritikSaranForm input[type="text"]:focus,
 .kritikSaranForm textarea:focus {
     outline: none;
-    border: 1px solid #7D7D7D;
+    border: 1px solid #7d7d7d;
 }
 
 .kritikSaranForm button.btn-submit {
     width: 50%;
     padding: 5px 50px;
-    background-color: #1C4CE1;
+    background-color: #1c4ce1;
     color: white;
     border: none;
     border-radius: 5px;
@@ -666,7 +649,7 @@ svg {
 }
 
 .kritikSaranForm button.btn-submit:hover {
-    background-color: #1432A4;
+    background-color: #1432a4;
 }
 
 /* SU Details */
