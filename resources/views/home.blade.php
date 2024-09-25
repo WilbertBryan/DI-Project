@@ -101,106 +101,69 @@
             <h2>Info Terbaru</h2>
 
             <div class="grid-3">
+            @foreach($info as $i)
             <!-- 1 -->
                 <div class="info">
                     <div class ="info-gambar">
-                    <img src="./image/portfolio-1.png" alt="gambar 1" />
+                    <img src="{{$i ->image_path}}" alt="{{ $i->title }}" style="width: 100%; height: 100%; {{ $i->width > $i->height ? 'object-fit: cover;' : 'object-fit: scale-down;' }}" />
                     </div>
                     <a href = "/" class = "info-link">
                         <div class="info-isi">
                             <div class="info-jenis">
-                                <div>Lomba</div>
+                                <div>
+                                    @if($i->category == 'open-recruitment')
+                                        Open Recruitment
+                                    @else
+                                        {{ ucfirst($i->category) }}
+                                    @endif
+                                    </div>
                             </div>
                             <div class="info-judul">
-                                <h3>Lomba A 2024</h3>
+                                <h3>{{$i ->title}}</h3>
                             </div>
                             <p>
-                            Junior Dev Internship – PT Madtive Studio
-                            Indonesia   📌Min. 4th Year College Student 📌 Job
-                            Description :…
+                            {{$i ->short_description}}
                             </p>
                         </div>
                     </a>
                 </div>
-
-            <!-- 2 -->
-            <div class="info">
-                <div class ="info-gambar">
-                <img src="./image/portfolio-2.png" alt="gambar 2" />
-                </div>
-                <a href = "/" class = "info-link">
-                    <div class="info-isi">
-                        <div class="info-jenis">
-                            <div>Berita</div>
-                        </div>
-                        <div class="info-judul">
-                            <h3>Berita B 2024</h3>
-                        </div>
-                        <p>
-                            Datathon 2024 adalah kompetisi sains data yang
-                            diselenggarakan oleh Riset dan Teknologi
-                            (RISTEK) Fakultas Ilmu Komputer Universitas
-                            Indonesia. Kompetisi…
-                        </p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- 3 -->
-            <div class="info">
-                <div class ="info-gambar">
-                <img src="./image/portfolio-3.jpeg" alt="gambar 3" />
-                </div>
-                <a href = "/" class = "info-link">
-                    <div class="info-isi">
-                        <div class="info-jenis">
-                            <div>Proker</div>
-                        </div>
-                        <div class="info-judul">
-                            <h3>Proker C 2024</h3>
-                        </div>
-                        <p>
-                            Menjadi programmer yang andal tidak hanya
-                            tentang menguasai bahasa pemrograman, tetapi
-                            juga tentang mengembangkan keterampilan
-                            analitis, memecahkan masalah, dan…
-                        </p>
-                    </div>
-                </a>
-            </div>
+            @endforeach
             </div>
         </div>
         <div class="yellow-line">
         </div>
     </section>
 
-    <!-- Home - Apresiasi -->
-    <section id = "apresiasi">
-
-        <div class = "judul-apresiasi">
-        <h2>Apresiasi</h2>
-        <div class="card-apresiasi">
-        <div class="apresiasi-left">
-            <img src = "./image/apresiasi.png" alt = "apresiasi-1" />
+        <!-- Home - Apresiasi -->
+    <section id="apresiasi">
+        <div class="judul-apresiasi">
+            <h2>Apresiasi</h2>
+            <div class="card-apresiasi">
+                @foreach ( $apresiasi as $a)
+                    <div class="apresiasi-left">
+                        <img src="{{ $a->image_path }}" alt="{{ $a->title }}">
+                    </div>
+                @endforeach
+            </div>
         </div>
-        <div class="apresiasi-right">
-            <img src = "./image/apresiasi.png" alt = "apresiasi-2" />
-        </div>
-        </div>
-        </div>
-        <div class="yellow-line">
-        </div>
+        <div class="yellow-line"></div>
     </section>
 
-    <!-- Home - Konten Terbaru -->
+    @if ($konten)
+        <!-- Home - Konten Terbaru -->
     <section id = "konten-terbaru">
         <div class = "judul-konten">
             <h2>Konten Terbaru</h2>
             <div class = "isi-konten">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/XqZsoesa55w?si=SfIX3N8I4bOTlqKH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="{{$konten ->youtube}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="text-center" style="margin-top: -60px;">
+                <h4>{{$konten ->title}}</h3>
             </div>
         </div>
     </section>
+    @endif
+
 
     <!-- Footer -->
     <footer class="text-center text-lg-start text-white" style="background-color: #1C4CE1;">
