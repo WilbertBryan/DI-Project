@@ -13,6 +13,9 @@ Route::get('/info2', function () {
 Route::get('/kritiksaran', function () {
     return view('kritikSaran');
 });
+Route::get('/sudetails', function () {
+    return view('suDetails');
+});
 Route::get('/tentangkami', function () {
     return view('tentangKami');
 });

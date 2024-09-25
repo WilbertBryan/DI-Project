@@ -29,7 +29,7 @@
 <body>
     <!-- header -->
     <header>
-        <nav class="navbar navbar-expand-lg" style="background-color: #1C4CE1;">
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #1C4CE1;">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="{{asset('/image/logo.png')}}" alt=""  style="width: 50%; height: auto; margin-left: 2px">
@@ -149,7 +149,7 @@
         </div>
         <!-- Detail Button -->
         <div class="text-center mt-4">
-            <a href="#" class="btn btn-primary btn-detail">Detail</a>
+            <a href="/sudetails" class="btn btn-primary btn-detail">Detail</a>
         </div>
 
     </section>

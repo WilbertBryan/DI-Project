@@ -98,23 +98,20 @@ h5 {
 }
 @media (min-width: 760px) {
     .fullscreen-image {
-        width: 100%; /* Make the image width 100% of its container */
-        height: calc(100vh - 93px); /* Maintain aspect ratio fit to screen*/
-        object-fit: cover; /* Ensure the image covers the container without distortion */
-        display: block; /* Remove any unwanted space below the image */
+        width: 100%;
+        /* Make the image width 100% of its container */
+        height: 100vh;
+        /* Maintain aspect ratio fit to screen*/
+        object-fit: cover;
+        /* Ensure the image covers the container without distortion */
+        display: block;
+        /* Remove any unwanted space below the image */
     }
 }
 #home-image {
     position: relative;
     text-align: center;
 }
-
-.fullscreen-image {
-    width: 100%;
-    height: auto;
-    position: relative;
-}
-
 .textLabelImage {
     position: absolute;
     top: 70%;

@@ -123,7 +123,7 @@ h5 {
     .fullscreen-image {
         width: 100%;
         /* Make the image width 100% of its container */
-        height: calc(100vh - 93px);
+        height: 100vh;
         /* Maintain aspect ratio fit to screen*/
         object-fit: cover;
         /* Ensure the image covers the container without distortion */
@@ -750,7 +750,7 @@ svg {
     text-align: left;
 }
 
-.btnSelengkapnya {
+.btnSelengkapnya2 {
     display: inline-block;
     background-color: #00509D;
     padding: 4px 20px;
@@ -765,7 +765,7 @@ svg {
     width: 150px;
 }
 
-.btnSelengkapnya:hover {
+.btnSelengkapnya2:hover {
     background-color: white;
     color: #00509D;
     border: 1.5px solid #00509D;

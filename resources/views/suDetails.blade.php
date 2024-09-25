@@ -24,7 +24,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <title>Home</title>
+    <title>SU Details</title>
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css" />
 </head>
@@ -32,7 +32,7 @@
 <body>
     <!-- header -->
     <header>
-        <nav class="navbar navbar-expand-lg" style="background-color: #1C4CE1;">
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #1C4CE1;">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="{{ asset('/image/logo.png') }}" alt=""
@@ -81,14 +81,12 @@
             <h1>DEPARTEMEN</h1>
 
             <div class="container">
-                <div class="row
-                justify-content-center">
-
+                <div class="row justify-content-center">
                     <!-- 1 -->
-                    <div class="col-sm-3 col-md-3 col-padding">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-padding">
                         <div class="detailsKecil">
                             <div class="detailsGambar">
-                                <img src="./image/ALL_HOD.png" alt="gambar 1" />
+                                <img src="./image/ALL_HOD.png" alt="gambar 1" class="img-fluid" />
                             </div>
                             <a href="/" class="detailsLink">
                                 <div class="detailsIsi">
@@ -96,17 +94,17 @@
                                         <h4>Head of Department</h4>
                                     </div>
                                     <p>HOD</p>
-                                    <a href="#detail-hod" class="btnSelengkapnya">Selengkapnya</a>
+                                    <a href="#detail-hod" class="btnSelengkapnya2">Selengkapnya</a>
                                 </div>
                             </a>
                         </div>
                     </div>
 
                     <!-- 2 -->
-                    <div class="col-sm-3 col-md-3 col-padding">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-padding">
                         <div class="detailsKecil">
                             <div class="detailsGambar">
-                                <img src="./image/ALL_ED.png" alt="gambar 1" />
+                                <img src="./image/ALL_ED.png" alt="gambar 1" class="img-fluid" />
                             </div>
                             <a href="/" class="detailsLink">
                                 <div class="detailsIsi">
@@ -114,17 +112,17 @@
                                         <h4>External Development</h4>
                                     </div>
                                     <p>ED</p>
-                                    <a href="#detail-ed" class="btnSelengkapnya">Selengkapnya</a>
+                                    <a href="#detail-ed" class="btnSelengkapnya2">Selengkapnya</a>
                                 </div>
                             </a>
                         </div>
                     </div>
 
                     <!-- 3 -->
-                    <div class="col-sm-3 col-md-3 col-padding">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-padding">
                         <div class="detailsKecil">
                             <div class="detailsGambar">
-                                <img src="./image/ALL_ID.png" alt="gambar 1" />
+                                <img src="./image/ALL_ID.png" alt="gambar 1" class="img-fluid" />
                             </div>
                             <a href="/" class="detailsLink">
                                 <div class="detailsIsi">
@@ -132,25 +130,25 @@
                                         <h4>Internal Development</h4>
                                     </div>
                                     <p>ID</p>
-                                    <a href="#detail-id" class="btnSelengkapnya">Selengkapnya</a>
+                                    <a href="#detail-id" class="btnSelengkapnya2">Selengkapnya</a>
                                 </div>
                             </a>
                         </div>
                     </div>
 
                     <!-- 4 -->
-                    <div class="col-sm-3 col-md-3 col-padding">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-padding">
                         <div class="detailsKecil">
                             <div class="detailsGambar">
-                                <img src="./image/ALL_ECM.png" alt="gambar 1" />
+                                <img src="./image/ALL_ECM.png" alt="gambar 1" class="img-fluid" />
                             </div>
                             <a href="/" class="detailsLink">
                                 <div class="detailsIsi">
                                     <div class="detailsJudul">
-                                        <h4>Entertaintment & Creative Media</h4>
+                                        <h4>Entertainment & Creative Media</h4>
                                     </div>
                                     <p>ECM</p>
-                                    <a href="#detail-ecm" class="btnSelengkapnya">Selengkapnya</a>
+                                    <a href="#detail-ecm" class="btnSelengkapnya2">Selengkapnya</a>
                                 </div>
                             </a>
                         </div>
@@ -164,7 +162,7 @@
                 justify-content-center">
 
                     <!-- 5 -->
-                    <div class="col-sm-3 col-md-3 col-padding">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-padding">
                         <div class="col-sm-auto">
                             <div class="detailsKecil">
                                 <div class="detailsGambar">
@@ -176,7 +174,7 @@
                                             <h4>Digital Innovation</h4>
                                         </div>
                                         <p>DI</p>
-                                        <a href="#detail-di" class="btnSelengkapnya">Selengkapnya</a>
+                                        <a href="#detail-di" class="btnSelengkapnya2">Selengkapnya</a>
                                     </div>
                                 </a>
                             </div>
@@ -184,7 +182,7 @@
                     </div>
 
                     <!-- 6 -->
-                    <div class="col-sm-3 col-md-3 col-padding">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-padding">
                         <div class="detailsKecil">
                             <div class="detailsGambar">
                                 <img src="./image/ALL_FF.png" alt="gambar 1" />
@@ -194,13 +192,13 @@
                                     <h4>Finance & Fundraising</h4>
                                 </div>
                                 <p>FF</p>
-                                <a href="#detail-ff" class="btnSelengkapnya">Selengkapnya</a>
+                                <a href="#detail-ff" class="btnSelengkapnya2">Selengkapnya</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- 7 -->
-                    <div class="col-sm-3 col-md-3 col-padding">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-padding">
                         <div class="detailsKecil">
                             <div class="detailsGambar">
                                 <img src="./image/ALL_PDD.png" alt="gambar 1" />
@@ -210,7 +208,7 @@
                                     <h4>Publication, Documentation, & Design</h4>
                                 </div>
                                 <p>PDD</p>
-                                <a href="#detail-pdd" class="btnSelengkapnya">Selengkapnya</a>
+                                <a href="#detail-pdd" class="btnSelengkapnya2">Selengkapnya</a>
                             </div>
                         </div>
                     </div>
