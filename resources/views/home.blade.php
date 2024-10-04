@@ -54,12 +54,13 @@
     <section id = "tentangkita">
         <div class = "tentangkita-left">
             <img src = "./image/tentangkita.png" alt = "logo tentangkita">
+            <h3 class="ml-1"style="">Best SU Universitas Ciputra 2023/2024.</h3>
         </div>
         <div class = "tentangkita-right">
             <h4>Tentang Kita</h4>
             <h2>Kabinet Synergia</h2>
             <p> Mendorong setiap mahasiswa/mahasiswi untuk menjadi versi terbaik dari diri mereka masing-masing melalui program-program yang kami buat </p>
-            <button href = "/" class = "btnSelengkapnya">Selengkapnya</button>
+            <a href = "/tentangkami" class = "btnSelengkapnya">Selengkapnya</a>
         </div>
     </section>
 
@@ -70,22 +71,22 @@
             <p>Yuk kita lihat informasi apa saja yang tersedia</p>
         </div>
         <div class="home-container">
-            <a href="/" class="info-isiBox">
+            <a href="/info?category=lomba" class="info-isiBox">
                 <img src="./image/medali.png" alt="Icon Medali">
                 <h3>Info Lomba</h3>
                 <p>Seputar informasi terkait lomba-lomba terkini</p>
             </a>
-            <a href="/" class="info-isiBox">
+            <a href="/info?category=open_recruitment" class="info-isiBox">
                 <img src="/image/announce.png" alt="Icon Announce">
                 <h3>Info Proker</h3>
                 <p>Seputar informasi terkait informasi dan pengumuman proker.</p>
             </a>
-            <a href="/" class="info-isiBox">
+            <a href="/info?category=prestasi" class="info-isiBox">
                 <img src="/image/medali.png" alt="Icon Medali">
                 <h3>Prestasi</h3>
                 <p>Seputar informasi terkait mahasiswa dan mahasiswi berprestasi pada ISB.</p>
             </a>
-            <a href="/" class="info-isiBox">
+            <a href="/info?category=berita" class="info-isiBox">
                 <img src="/image/announce.png" alt="Icon Announce">
                 <h3>Open Recruitment</h3>
                 <p>Seputar informasi terkait Pendaftaran proker dan pengumuman proker.</p>

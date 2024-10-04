@@ -184,11 +184,14 @@ svg {
 }
 
 .tentangkita-left img {
-    width: 100%;
+    width: 80%;
     padding-left: 12.5rem;
-    padding-top: 12px;
 }
-
+.tentangkita-left h3 {
+    padding-left: 12.5rem;
+    font-size: 1.5vw;
+    font-weight: 400;
+}
 .tentangkita-right {
     padding-right: 60px;
 }
@@ -268,6 +271,12 @@ svg {
         max-width: none;
         /* Remove max-width for smaller screens */
         justify-content: center;
+    }
+    .tentangkita-left h3 {
+        padding-left: 12.5rem;
+        margin-left: -20px;
+        font-size: 16px;
+        font-weight: 400;
     }
 
     .tentangkita-right {
