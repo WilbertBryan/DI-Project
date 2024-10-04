@@ -28,8 +28,10 @@ class HomeController extends Controller
             $item->height = null;
         }
 
+
         return $item;
     });
+
 
     return view('home', compact('apresiasi', 'konten', 'info'));
 }

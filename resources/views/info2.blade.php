@@ -208,12 +208,13 @@
         </nav>
     </header>
 
+
     <!-- Header Section -->
     <section class="header-section">
         <div class="container">
-            <h1>LO KREATIF 2025</h1>
+            <h1>{{ $info->title }}</h1>
             <div class="col-md-8">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>{{ $info->short_description }}</p>
             </div>
             <button type="button" class="btnDaftar">Daftar</button>
         </div>
@@ -222,35 +223,37 @@
     <!-- Content Section -->
     <section class="content-section container">
         <div class="content col-md-8">
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, molestias fugiat reiciendis dolore est suscipit dignissimos accusantium qui animi ipsam quam dolorum dicta numquam delectus obcaecati nostrum voluptates, nam magnam!
+           {{ $info->long_description }}
         </div>
 
         <div class="download-section">
             <div class="card" style="width: 18rem;">
-                <img src="{{asset('/image/lokreatif.png')}}" class="card-img-top" alt="LO Kreatif 2024">
+
+                <img src="{{asset($info->image_path)}}" class="card-img-top" alt="{{ $info->title }}" style="border-top-left-radius: 15px; border-top-right-radius: 15px; width:auto; height: 300px;">
             </div>
             <br>
             <p>Download:</p>
-            <a href="#">
+            <a href="{{ $info->download }}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
                     <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
                     <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
-                  </svg> Guide Book LO Kreatif 2025
+                  </svg> Guide  {{ $info->title }}
             </a>
             <div class="contact-section mt-4">
                 <p>Info lebih lanjut:</p>
-                <a href="#">
-                    <img src="https://img.icons8.com/color/48/000000/google-logo.png" class="contact-icon" width="20" height="20" /> lokreatif2025.com
+                <a href="{{ $info->website }}">
+                    <img src="https://img.icons8.com/color/48/000000/google-logo.png" class="contact-icon" width="20" height="20" /> {{ $info->title }}.com
                 </a>
-                <a href="#">
-                    <img src="https://img.icons8.com/fluent/48/000000/instagram-new.png" class="contact-icon" width="20" height="20" /> @lokreatif.id
+                <a href="{{ $info->instagram }}">
+                    <img src="https://img.icons8.com/fluent/48/000000/instagram-new.png" class="contact-icon" width="20" height="20" /> {{ $info->title }}.id
                 </a>
-                <a href="#">
-                    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" class="contact-icon" width="20" height="20" /> +62 xxxx xxxx xxxx (Budi)
+                <a href="{{ $info->whatsapp }}">
+                    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" class="contact-icon" width="20" height="20" /> Atas Nama (Budi)
                 </a>
             </div>
         </div>
     </section>
+
     <!-- Back Button -->
     <div class="content-section container">
         <a class="back-button"href="#">&lt;</a>
