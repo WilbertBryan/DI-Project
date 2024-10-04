@@ -4,12 +4,17 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KritikController;
-Route::get('/info', function () {
-    return view('info');
-});
-Route::get('/info2', function () {
-    return view('info2');
-});
+use App\Http\Controllers\InfoController;
+
+// Route::get('/info', function () {
+//     return view('info');
+// });
+
+Route::get('/info', [InfoController::class, 'loadAllInfo'])->name('LoadInfo');
+Route::get('/info2/{id}', [InfoController::class, 'infoDetails']);
+// Route::get('/info2', function () {
+//     return view('info2');
+// });
 Route::get('/kritiksaran', function () {
     return view('kritikSaran');
 });

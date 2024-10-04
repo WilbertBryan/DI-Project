@@ -170,63 +170,28 @@
     <section id="info-image">
         <div id="carouselExampleControlsNoTouching" class="carousel slide" data-ride="carousel" data-bs-touch="false" data-bs-interval="2000">
             <div class="carousel-inner">
-              <!-- First Carousel -->
-              <div class="carousel-item active">
-                <img src="{{asset('/image/info-image.png')}}" class="d-block w-100 fullscreen-image" alt="...">
-                <div class="carousel-caption d-none d-md-block text-start">
-                    <div class="blurredbackground">
-                       Berita
-                    </div>
-                    <h5>Kabinet SYNERGIA</h5>
-                    <div class="row">
-                        <div class="col-md-9 col-sm-11 ">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
-                        </div>
-                        <div class="col-md-3 col-sm-2 date-responsive">
-                            <p>24 Jan 2024</p>
-                        </div>
-                    </div>
-                    <br>
-                </div>
-              </div>
-              <!-- Second Carousel -->
-              <div class="carousel-item">
-                <img src="{{asset('/image/info-image.png')}}" class="d-block w-100 fullscreen-image" alt="...">
-                <div class="carousel-caption d-none d-md-block text-start">
-                    <div class="blurredbackground">
-                       Open Recruitment
-                    </div>
-                    <h5>Kabinet SYNERGIA</h5>
-                    <div class="row">
-                        <div class="col-md-9 col-sm-11 ">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
-                        </div>
-                        <div class="col-md-3 col-sm-2 date-responsive">
-                            <p>24 Jan 2024</p>
+                @foreach($newinfo as $index => $info)
+                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                        <img src="{{ asset($info->image_path ?? '/image/info-image.png') }}" class="d-block w-100 fullscreen-image" alt="{{ $info->title }}">
+                        <div class="carousel-caption d-none d-md-block text-start">
+                            <div class="blurredbackground">
+                               {{ $info->category }} <!-- Ganti dengan kategori atau info relevan -->
+                            </div>
+                            <h5>{{ $info->title }}</h5>
+                            <div class="row">
+                                <div class="col-md-9 col-sm-11">
+                                    <p>{{ $info->description }}</p> <!-- Ganti dengan deskripsi dari info -->
+                                </div>
+                                <div class="col-md-3 col-sm-2 date-responsive">
+                                    <p>{{ $info->created_at->format('d M Y') }}</p> <!-- Format tanggal -->
+                                </div>
+                            </div>
+                            <br>
                         </div>
                     </div>
-                    <br>
-                </div>
-              </div>
-              <!-- ThirdCarousel -->
-              <div class="carousel-item">
-                <img src="{{asset('/image/info-image.png')}}" class="d-block w-100 fullscreen-image" alt="...">
-                <div class="carousel-caption d-none d-md-block text-start">
-                    <div class="blurredbackground">
-                       Lomba
-                    </div>
-                    <h5>Kabinet SYNERGIA</h5>
-                    <div class="row">
-                        <div class="col-md-9 col-sm-11 ">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
-                        </div>
-                        <div class="col-md-3 col-sm-2 date-responsive">
-                            <p>24 Jan 2024</p>
-                        </div>
-                    </div>
-                    <br>
-                </div>
-              </div>
+                @endforeach
+            </div>
+
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -255,110 +220,63 @@
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <ul class="nav nav-pills mb-4">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Semua</a>
+                            <a class="nav-link {{ request('category') == 'all' ? 'active' : '' }}" href="?category=all">Semua</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Lomba</a>
+                            <a class="nav-link {{ request('category') == 'lomba' ? 'selected' : '' }}" href="?category=lomba">Lomba</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Open Recruitment</a>
+                            <a class="nav-link {{ request('category') == 'open_recruitment' ? 'active' : '' }}" href="?category=open_recruitment">Open Recruitment</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Prestasi</a>
+                            <a class="nav-link {{ request('category') == 'prestasi' ? 'active' : '' }}" href="?category=prestasi">Prestasi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Berita</a>
+                            <a class="nav-link {{ request('category') == 'berita' ? 'active' : '' }}" href="?category=berita">Berita</a>
                         </li>
                     </ul>
+
+
                     <div>
                         <label for="sort" class="mr-2">Urutkan:</label>
                         <select id="sort" class="form-control d-inline-block w-auto">
-                            <option>Terbaru</option>
-                            <option>Terlama</option>
+                            <option value="latest" {{ request('sort') == 'latest' ? 'selected' : '' }}>Terbaru</option>
+                            <option value="oldest" {{ request('sort') == 'oldest' ? 'selected' : '' }}>Terlama</option>
                         </select>
                     </div>
+
+
                 </div>
                 <!-- Cards Sectiion -->
+
                 <div class="row">
-                    <!-- Repeat this card structure for each event -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <a href="#" class="card-hover" style="text-decoration: none; color: inherit;">
-                            <div class="card h-100" style="border-radius: 15px; display: flex; flex-direction: column;">
-                                <img src="{{asset('/image/oprec-epic.png')}}" class="card-img-top" alt="Event Image" style="border-top-left-radius: 15px; border-top-right-radius: 15px; width:auto; height: 300px;">
-                                <div class="card-body">
-                                    <div class="labelbackground">
-                                        Berita
-                                    </div>
-                                    <div class="d-flex flex-column" style="flex: 1;">
-                                        <span class="badge badge-warning">Open Recruitment</span>
-                                        <h5 class="card-title" style="color: #1C4CE1;">Open Recruitment EPIC 2025</h5>
-                                        <p class="card-text" style="color: #1C4CE1;">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Repeat ends -->
-                    <!-- Repeat this card structure for each event -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <a href="#" class="card-hover" style="text-decoration: none; color: inherit;">
-                            <div class="card h-100" style="border-radius: 15px; display: flex; flex-direction: column;">
-                                <img src="{{asset('/image/lokreatif.png')}}" class="card-img-top" alt="Event Image" style="border-top-left-radius: 15px; border-top-right-radius: 15px; width:auto; height: 300px;">
-                                <div class="card-body">
-                                    <div class="labelbackground">
-                                        Open Recruitment
-                                    </div>
-                                    <div class="d-flex flex-column" style="flex: 1;">
-                                        <span class="badge badge-warning">Open Recruitment</span>
-                                        <h5 class="card-title" style="color: #1C4CE1;">Open Recruitment EPIC 2025</h5>
-                                        <p class="card-text" style="color: #1C4CE1;">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et</p>
+                    @foreach ($infos as $info)
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <a href="/info2/{{ $info->title }}" class="card-hover" style="text-decoration: none; color: inherit;">
+                                <div class="card h-100" style="border-radius: 15px; display: flex; flex-direction: column;">
+                                    <img src="{{ $info->image_path }}" class="card-img-top" alt="Event Image" style="border-top-left-radius: 15px; border-top-right-radius: 15px; width: auto; height: 300px;">
+                                    <div class="card-body">
+                                        <div class="labelbackground">
+                                            {{ $info->category }}
+                                        </div>
+                                        <div class="d-flex flex-column" style="flex: 1;">
+                                            <span class="badge badge-warning">Open Recruitment</span>
+                                            <h5 class="card-title" style="color: #1C4CE1;">{{ $info->title }}</h5>
+                                            <p class="card-text" style="color: #1C4CE1;">{{ Str::limit($info->short_description, 100) }}</p> <!-- Short description -->
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Repeat ends -->
-                    <!-- Repeat this card structure for each event -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <a href="#" class="card-hover" style="text-decoration: none; color: inherit;">
-                            <div class="card h-100" style="border-radius: 15px; display: flex; flex-direction: column;">
-                                <img src="{{asset('/image/lokreatif.png')}}" class="card-img-top" alt="Event Image" style="border-top-left-radius: 15px; border-top-right-radius: 15px; width:auto; height: 300px;">
-                                <div class="card-body">
-                                    <div class="labelbackground">
-                                        Open Recruitment
-                                    </div>
-                                    <div class="d-flex flex-column" style="flex: 1;">
-                                        <span class="badge badge-warning">Open Recruitment</span>
-                                        <h5 class="card-title" style="color: #1C4CE1;">Open Recruitment EPIC 2025</h5>
-                                        <p class="card-text" style="color: #1C4CE1;">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Repeat ends -->
-                    <!-- Repeat this card structure for each event -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <a href="#" class="card-hover" style="text-decoration: none; color: inherit;">
-                            <div class="card h-100" style="border-radius: 15px; display: flex; flex-direction: column;">
-                                <img src="{{asset('/image/lokreatif.png')}}" class="card-img-top" alt="Event Image" style="border-top-left-radius: 15px; border-top-right-radius: 15px; width:auto; height: 300px;">
-                                <div class="card-body">
-                                    <div class="labelbackground">
-                                        Open Recruitment
-                                    </div>
-                                    <div class="d-flex flex-column" style="flex: 1;">
-                                        <span class="badge badge-warning">Open Recruitment</span>
-                                        <h5 class="card-title" style="color: #1C4CE1;">Open Recruitment EPIC 2025</h5>
-                                        <p class="card-text" style="color: #1C4CE1;">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+
                     <!-- Repeat ends -->
                 </div>
+
             </div>
-            <!-- Paging -->
+            {{-- <!-- Paging -->
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
                     <li class="page-item me-3">
@@ -375,7 +293,14 @@
                         </a>
                     </li>
                 </ul>
-            </nav>
+            </nav> --}}
+            <!-- Paging -->
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        {{ $infos->links() }}
+    </ul>
+</nav>
+
 
         </div>
 
@@ -452,7 +377,7 @@
     <div class="text-center p-3" >
         Copyright © Digital Innovation
     </div>
-    <script>
+    {{-- <script>
         //Filter tidak refresh
         document.querySelectorAll('.nav-pills .nav-link').forEach(function(navLink) {
             navLink.addEventListener('click', function(event) {
@@ -463,7 +388,15 @@
                 this.classList.add('active');
             });
         });
+    </script> --}}
+    <script>
+        document.getElementById('sort').addEventListener('change', function() {
+            const sortValue = this.value;
+
+            window.location.href = `?sort=${sortValue}`;
+        });
     </script>
+
     </script>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
