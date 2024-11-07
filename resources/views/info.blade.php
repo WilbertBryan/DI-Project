@@ -172,7 +172,7 @@
             <div class="carousel-inner">
                 @foreach($newinfo as $index => $info)
                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                        <img src="{{ asset($info->image_path ?? '/image/info-image.png') }}" class="d-block w-100 fullscreen-image" alt="{{ $info->title }}">
+                        <img src="{{ asset('/image/info-image.png') }}" class="d-block w-100 fullscreen-image" alt="{{ $info->title }}">
                         <div class="carousel-caption d-none d-md-block text-start">
                             <div class="blurredbackground">
                                {{ $info->category }} <!-- Ganti dengan kategori atau info relevan -->
