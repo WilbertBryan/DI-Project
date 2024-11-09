@@ -51,14 +51,14 @@
             <hr>
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                    <strong>Wilbert</strong>
+                    <img src="{{ Auth::user()->avatar }}" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <strong>{{ Auth::user()->name }}</strong>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
                     <li><a class="dropdown-item" href="#">Settings</a></li>
                     <li><a class="dropdown-item" href="#">Profile</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    <li><a class="dropdown-item" href="/admin-logout">Sign out</a></li>
                 </ul>
             </div>
         </nav>
@@ -78,7 +78,7 @@
                         <input type="text" class="form-control" id="title" name="title" placeholder="Enter title">
                     </div>
                     <div class="mb-3">
-                        <label for="apresiasiImage" class="form-label">Upload Apresiasi Images (Max: 2 Size: 1080 x 192-)</label>
+                        <label for="apresiasiImage" class="form-label">Upload Apresiasi Images (Max: 2 Size: 1080 x 1920)</label>
                         <input type="file" class="form-control" id="apresiasiImage" name="apresiasiImage" accept="image/*" multiple>
                     </div>
                     <div class="mb-3">

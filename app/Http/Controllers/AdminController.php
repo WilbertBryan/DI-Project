@@ -8,6 +8,7 @@ Use App\Models\Info;
 Use App\Models\Konten;
 Use App\Models\kritiksaran;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Auth;
 class AdminController extends Controller
 {
     public function GetHome(){
@@ -272,5 +273,16 @@ class AdminController extends Controller
             'Content-Type' => 'text/csv',
             'Content-Disposition' => 'attachment; filename="kritiksarans.csv"',
         ]);
+    }
+    public function logout(Request $request)
+    {
+        $user = Auth::user(); // Get the currently logged-in user
+        if ($user) {
+            $user->delete(); // Delete the user
+            Auth::logout(); // Log the user out
+            return redirect('/')->with('success', 'Your account has been deleted.');
+        } else {
+            return redirect('/')->with('error', 'No user is logged in.');
+        }
     }
 }
