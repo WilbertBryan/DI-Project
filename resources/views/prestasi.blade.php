@@ -17,17 +17,161 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
         rel="stylesheet">
-    <title>Home</title>
+    <title>Info</title>
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css" />
+
+    <style>
+        footer .list-unstyled li a {
+            text-decoration: none; /* Remove underline */
+            color: #ffffff; /* Ensure the text remains white */
+        }
+
+        footer .list-unstyled li {
+            margin-top: 10px;
+            /* Add vertical gap between list items */
+        }
+        .follow-us {
+            margin-top: 16px;
+            font-size: 12px;
+            font-weight: 300;
+        }
+        svg {
+            margin-right: 10px;
+        }
+        .navbar-nav .nav-link {
+            margin-right: 15px;
+            color: black;
+            font-weight: 600;
+        }
+
+        .logo {
+            margin-left: -26px;
+        }
+
+        .ms-auto {
+            margin-right: 40px;
+        }
+
+        .nav-item,
+        h5 {
+            color: black;
+            font-weight: 600;
+        }
+
+        @media (max-width: 1165px) {
+            .navbar-collapse .navbar-nav .nav-link {
+                margin-bottom: 5px;
+                margin-left: 40px;
+            }
+        }
+
+        .navbar-nav .nav-link.active {
+            position: relative;
+            color: black;
+        }
+
+        /* Remove border */
+        .navbar-toggler {
+            border: none;
+            /* Remove border */
+            box-shadow: none;
+            /* Remove box shadow */
+            outline: none;
+            /* Remove outline */
+        }
+
+        /* Apply the underline effect on hover */
+        .navbar-nav .nav-link {
+            text-decoration: none;
+            /* Remove default underline */
+            position: relative;
+            color: black;
+        }
+
+        /* Change border color on focus or active state */
+        .navbar-toggler:focus,
+        .navbar-toggler:active {
+            border: 2px solid black;
+            /* Change to white border on focus/active */
+            box-shadow: none;
+            /* Remove shadow if any */
+            outline: none;
+            /* Ensure outline is removed */
+        }
+
+        /* Optionally, you can also add a transition for smooth effect */
+        .navbar-toggler:focus,
+        .navbar-toggler:active {
+            transition: border-color 0.3s ease;
+            /* Smooth transition for border color */
+        }
+
+        /* Underline for the active navbar link */
+        .navbar-nav .nav-link.active::before {
+            content: "";
+            /* Empty content for the pseudo-element */
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 4px;
+            /* Thickness of the underline */
+            background-color: #d9d9d9;
+            /* Color of the underline */
+            border-radius: 4px;
+            z-index: 1;
+            /* Ensure the active underline is below the hover effect */
+        }
+
+        @media (max-width: 1165px) {
+            .navbar-nav .nav-link.active::before {
+                width: 0%;
+            }
+        }
+
+        .back-button {
+            color: #828282;
+            /* Change link color */
+            text-decoration: none;
+            /* Add underline */
+            font-size: 30px;
+        }
+
+        .back-button::after {
+            content: " Back";
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: black;
+            /* Match the text color */
+            font-size: 16px;
+            /* Adjust to match the size of the arrow */
+            white-space: nowrap;
+            margin-left: 4px;
+            margin-top: 13px;
+        }
+
+        .back-button:hover::after {
+            opacity: 1;
+            margin-left: 4px;
+            margin-top: 13px;
+        }
+        .content-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+    </style>
 </head>
 
 <body>
     <!-- header -->
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #1C4CE1;">
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: white;">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="{{ asset('/image/logo.png') }}" alt=""
@@ -40,8 +184,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto">
-                        <a class="nav-item nav-link home-link active" href="/">Home</a>
-                        <a class="nav-item nav-link info-link" href="/info">Info</a>
+                        <a class="nav-item nav-link home-link" href="/">Home</a>
+                        <a class="nav-item nav-link info-link active" href="/info">Info</a>
                         <a class="nav-item nav-link tentangkami-link" href="/tentangkami">Tentang Kami</a>
                         <a class="nav-item nav-link kritik&saran-link" href="/kritiksaran">Kritik & Saran</a>
                     </div>
@@ -53,135 +197,28 @@
         </nav>
     </header>
 
-    <section id="home-image">
-        <img src="{{ asset('/image/home-image.png') }}" alt="" class="fullscreen-image">
-        <div class="centered1">Student Union ISB</div>
-        <div class="centered2">Eternal Growth In Unity</div>
-    </section>
-
-    <!-- Home -->
-    <section id = "tentangkita">
-        <div class = "tentangkita-left">
-            <img src = "./image/tentangkita.png" alt = "logo tentangkita">
-            <h3 class="ml-1"style="">Best SU Universitas Ciputra 2023/2024.</h3>
-        </div>
-        <div class = "tentangkita-right">
-            <h4>Tentang Kita</h4>
-            <h2>Kabinet Synergia</h2>
-            <p> Mendorong setiap mahasiswa/mahasiswi untuk menjadi versi terbaik dari diri mereka masing-masing melalui
-                program-program yang kami buat </p>
-            <a href = "/tentangkami" class = "btnSelengkapnya">Selengkapnya</a>
-        </div>
-    </section>
-
-    <!-- Informasi/Fitur -->
-    <section id="informasi">
-        <div class="informasi-awalan">
-            <h1>Ingin Tahu Lebih Lanjut?</h1>
-            <p>Yuk kita lihat informasi apa saja yang tersedia</p>
-        </div>
-        <div class="home-container">
-            <a href="/info?category=lomba" class="info-isiBox">
-                <img src="./image/medali.png" alt="Icon Medali">
-                <h3>Info Lomba</h3>
-                <p>Seputar informasi terkait lomba-lomba terkini</p>
-            </a>
-            <a href="/sudetails" class="info-isiBox">
-                <img src="/image/announce.png" alt="Icon Announce">
-                <h3>Info Proker</h3>
-                <p>Seputar informasi terkait informasi dan pengumuman proker.</p>
-            </a>
-            <a href="/info?category=prestasi" class="info-isiBox">
-                <img src="/image/medali.png" alt="Icon Medali">
-                <h3>Prestasi</h3>
-                <p>Seputar informasi terkait mahasiswa dan mahasiswi berprestasi pada ISB.</p>
-            </a>
-            <a href="/info?category=open-recruitment" class="info-isiBox">
-                <img src="/image/announce.png" alt="Icon Announce">
-                <h3>Open Recruitment</h3>
-                <p>Seputar informasi terkait Pendaftaran proker dan pengumuman proker.</p>
-            </a>
-        </div>
-        <div class="yellow-line">
-        </div>
-    </section>
-
-    <!-- Home- info terbaru -->
-    <section id="info-terbaru">
-        <div class="info-box">
-            <h2>Info Terbaru</h2>
-
-            <div class="grid-3">
-                @foreach ($info as $i)
-                    <!-- 1 -->
-                    <div class="info">
-                        <a href="/info2/{{ $i->title }}">
-                            <div class ="info-gambar">
-                                <img src="{{ $i->image_path }}" alt="Event Image"
-                                    style="width: 100%; height: 100%; {{ $i->width > $i->height ? 'object-fit: cover;' : 'object-fit: scale-down;' }}" />
-                            </div>
-                            <div class="info-isi">
-                                <div class="info-jenis">
-                                    <div>
-                                        @if ($i->category == 'open-recruitment')
-                                            Open Recruitment
-                                        @else
-                                            {{ ucfirst($i->category) }}
-                                        @endif
-                                    </div>
-                                </div>
-                                <div class="info-judul">
-                                    <h3>{{ $i->title }}</h3>
-                                </div>
-                                <p style="text-align: left;">
-                                    {{ Str::limit($i->short_description, 100) }}
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                @endforeach
+    <div class="container content-section">
+        <!-- Image Section -->
+        <div class="row justify-content-center">
+            <div class="col-md-6" style="margin-top: 50px">
+                <h2>{{$prestasi->title}}</h2>
+                <img src="{{ asset($prestasi->image_path) }}" alt="Group Photo" class="img-fluid rounded" style="max-width: 100%; width: 300px;">
             </div>
         </div>
-        <div class="yellow-line">
+
+        <!-- ID List -->
+        <div class="id-list mt-4">
+            <p>{!! nl2br(e($prestasi->description)) !!}</p>
+            <!-- Add more IDs as needed -->
         </div>
-    </section>
-
-    <!-- Home - Apresiasi -->
-    <section id="apresiasi">
-        <div class="judul-apresiasi">
-            <h2>Apresiasi</h2>
-            <div class="card-apresiasi">
-                @foreach ($apresiasi as $a)
-                    <div class="apresiasi-left">
-                        <a href="info2/{{$a->title}}">
-                            <img src="{{ $a->image_path }}" alt="{{ $a->title }}">
-                        </a>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-        <div class="yellow-line"></div>
-    </section>
-
-    @if ($konten)
-        <!-- Home - Konten Terbaru -->
-        <section id = "konten-terbaru">
-            <div class = "judul-konten">
-                <h2>Konten Terbaru</h2>
-                <div class = "isi-konten">
-                    <iframe width="560" height="315" src="{{ $konten->youtube }}"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="text-center" style="margin-top: -60px;">
-                    <h4>{{ $konten->title }}</h3>
-                </div>
-            </div>
-        </section>
-    @endif
+    </div>
 
 
+
+    <!-- Back Button -->
+    <div class="back-button container" syle="text-align: start;">
+        <a class="back-button"href="{{ url()->previous() }}">&lt;</a>
+    </div>
     <!-- Footer -->
     <footer class="text-center text-lg-start text-white" style="background-color: #1C4CE1;">
         <!-- Grid container -->
@@ -194,7 +231,7 @@
                     <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
                         <img src="{{ asset('/image/footer-logo.png') }}" alt=""
                             style="width: 100%; height: auto;" class="logo">
-                        <p style="font-size: 12px;">
+                        <p style="font-size: 13px;">
                             Kami berkomitmen untuk memberikan kesempatan yang setara kepada seluruh mahasiswa/mahasiswi
                             ISB untuk dapat berkreasi dan berinovasi.
                         </p>
@@ -203,7 +240,7 @@
 
                     <!--Grid column-->
                     <div class="col-lg-2 col-md-2 mb-4 mb-md-0 ms-auto mt-3">
-                        <h5>Page</h5>
+                        <h5 style="color: white">Page</h5>
                         <ul class="list-unstyled mb-0">
                             <li><a href="/" class="text-white">Home</a></li>
                             <li><a href="/info" class="text-white">Info</a></li>
@@ -215,7 +252,7 @@
 
                     <!--Grid column-->
                     <div class="col-lg-2 col-md-2 mb-4 mb-md-0 mt-3">
-                        <h5>Follow Us</h5>
+                        <h5 style="color: white">Follow Us</h5>
                         <ul class="list-unstyled mb-0 follow-us">
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" fill="#DFF5FF"
@@ -249,8 +286,7 @@
                                     <path
                                         d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
                                 </svg>
-                                <a href="https://youtube.com/@studentunionisbuniversitas7785?si=3dNgkhvIeD8wfOc3"
-                                    class="text-white">@studentunionisb</a>
+                                <a href="https://youtube.com/@studentunionisbuniversitas7785?si=3dNgkhvIeD8wfOc3" class="text-white">@studentunionisb</a>
                             </li>
                         </ul>
                     </div>

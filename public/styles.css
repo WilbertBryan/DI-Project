@@ -434,7 +434,7 @@ svg {
     color: inherit;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     height: 100%;
 }
@@ -452,6 +452,18 @@ svg {
     overflow: hidden;
     margin-bottom: 0px;
     background-color: #1c4ce1;
+}
+.info-gambars {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 0px;
+    background-color: #1c4ce1;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .info-gambar img {

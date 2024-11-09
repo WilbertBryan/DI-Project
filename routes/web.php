@@ -46,3 +46,5 @@ Route::get('/admin-deleteinfo/{id}',[AdminController::class,"DeleteInfo"])->name
 Route::get('/admin-kritikSaran',[AdminController::class,"GetKritik"]);
 Route::delete('/admin-kritikSaran-delete/{id}', [AdminController::class, 'DeleteKritik'])->name('DeleteKritik');
 Route::get('/admin/export-kritik', [AdminController::class, 'exportKritik'])->name('ExportKritik');
+Route::get('/prestasi/{id}', [InfoController::class, 'infoDetails']);
+Route::get('/search',[InfoController::class,'searchInfo']);

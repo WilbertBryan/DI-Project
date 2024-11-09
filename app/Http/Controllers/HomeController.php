@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function GetHome()
 {
-    $apresiasi = Apresiasi::all();
+    $apresiasi = Apresiasi::latest()->take(2)->get();
     $konten = Konten::latest()->first();
 
     // Get the latest 3 'Info' records with image dimensions

@@ -16,13 +16,6 @@ class AdminController extends Controller
         return view('Admin/admin-home',compact('apresiasi','konten'));
     }
     public function PostApresiasi(Request $request){
-        // Check if there are already 2 Apresiasi records
-        $apresiasiCount = Apresiasi::count();
-
-        if ($apresiasiCount >= 2) {
-            // Redirect back with an error message if there are already 2 records
-            return redirect()->back()->with('error', 'You can only add up to 2 Apresiasi.');
-        }
         $request->validate([
             'title' => 'required|string|max:255',
             'apresiasiImage' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',

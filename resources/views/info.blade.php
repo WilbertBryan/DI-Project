@@ -175,12 +175,16 @@
                         <img src="{{ asset('/image/info-image.png') }}" class="d-block w-100 fullscreen-image" alt="{{ $info->title }}">
                         <div class="carousel-caption d-none d-md-block text-start">
                             <div class="blurredbackground">
-                               {{ $info->category }} <!-- Ganti dengan kategori atau info relevan -->
+                                @if($info->category == 'open-recruitment')
+                                    Open Recruitment
+                                @else
+                                    {{ ucfirst($info->category) }}
+                                @endif
                             </div>
                             <h5>{{ $info->title }}</h5>
                             <div class="row">
                                 <div class="col-md-9 col-sm-11">
-                                    <p>{{ $info->description }}</p> <!-- Ganti dengan deskripsi dari info -->
+                                    <p>{{ $info->short_description }}</p> <!-- Ganti dengan deskripsi dari info -->
                                 </div>
                                 <div class="col-md-3 col-sm-2 date-responsive">
                                     <p>{{ $info->created_at->format('d M Y') }}</p> <!-- Format tanggal -->
@@ -210,7 +214,7 @@
             <h2 style="color: #1C4CE1;">Informasi</h2>
             <p style="color: #828282">lorem ipsum dolor sit amet consectetur adipiscing elit sed do </p>
             <!-- Search -->
-            <form action="">
+            <form action="/search">
                 <div class="search mx-auto">
                     <span class="search-icon material-symbols-outlined">search</span>
                     <input class="search-input" name="search_input" id="search_input" placeholder="Search Here" type="text">
@@ -220,19 +224,19 @@
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <ul class="nav nav-pills mb-4">
                         <li class="nav-item">
-                            <a class="nav-link {{ request('category') == 'all' ? 'active' : '' }}" href="?category=all">Semua</a>
+                            <a class="nav-link {{ request('category') == 'all' ? 'active' : '' }}" href="/info?category=all">Semua</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ request('category') == 'lomba' ? 'selected' : '' }}" href="?category=lomba">Lomba</a>
+                            <a class="nav-link {{ request('category') == 'lomba' ? 'active' : '' }}" href="/info?category=lomba">Lomba</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ request('category') == 'open_recruitment' ? 'active' : '' }}" href="?category=open_recruitment">Open Recruitment</a>
+                            <a class="nav-link {{ request('category') == 'open-recruitment' ? 'active' : '' }}" href="/info?category=open-recruitment">Open Recruitment</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ request('category') == 'prestasi' ? 'active' : '' }}" href="?category=prestasi">Prestasi</a>
+                            <a class="nav-link {{ request('category') == 'prestasi' ? 'active' : '' }}" href="/info?category=prestasi">Prestasi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ request('category') == 'berita' ? 'active' : '' }}" href="?category=berita">Berita</a>
+                            <a class="nav-link {{ request('category') == 'berita' ? 'active' : '' }}" href="/info?category=berita">Berita</a>
                         </li>
                     </ul>
 
@@ -255,15 +259,23 @@
                         <div class="col-lg-4 col-md-6 mb-4">
                             <a href="/info2/{{ $info->title }}" class="card-hover" style="text-decoration: none; color: inherit;">
                                 <div class="card h-100" style="border-radius: 15px; display: flex; flex-direction: column;">
-                                    <img src="{{ $info->image_path }}" class="card-img-top" alt="Event Image" style="border-top-left-radius: 15px; border-top-right-radius: 15px; width: auto; height: 300px;">
+                                    <div class="info-gambars">
+                                        <img src="{{ $info->image_path }}" class="card-img-top" alt="Event Image" style=" {{ $info->width > $info->height ? 'object-fit: cover;' : 'object-fit: scale-down;' }}width: 100%; height: 100%;">
+                                    </div>
+
+
                                     <div class="card-body">
                                         <div class="labelbackground">
-                                            {{ $info->category }}
+                                            @if($info->category == 'open-recruitment')
+                                                Open Recruitment
+                                            @else
+                                                {{ ucfirst($info->category) }}
+                                            @endif
                                         </div>
                                         <div class="d-flex flex-column" style="flex: 1;">
                                             <span class="badge badge-warning">Open Recruitment</span>
                                             <h5 class="card-title" style="color: #1C4CE1;">{{ $info->title }}</h5>
-                                            <p class="card-text" style="color: #1C4CE1;">{{ Str::limit($info->short_description, 100) }}</p> <!-- Short description -->
+                                            <p class="card-text" style="color: #1C4CE1;">{{ Str::limit($info->short_description ?: $info->description, 100) }}</p> <!-- Short description -->
                                         </div>
                                     </div>
                                 </div>
@@ -296,9 +308,11 @@
             </nav> --}}
             <!-- Paging -->
 <nav aria-label="Page navigation example">
+    @if ($infos->hasPages())
     <ul class="pagination justify-content-center">
         {{ $infos->links() }}
     </ul>
+@endif
 </nav>
 
 
@@ -361,7 +375,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" fill="#DFF5FF" class="bi bi-youtube" viewBox="0 0 16 16" opacity="0.6">
                         <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
                     </svg>
-                    <a href="#!" class="text-white">@studentunionisb</a>
+                    <a href="https://youtube.com/@studentunionisbuniversitas7785?si=3dNgkhvIeD8wfOc3" class="text-white">@studentunionisb</a>
                 </li>
                 </ul>
             </div>
