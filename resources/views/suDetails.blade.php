@@ -34,7 +34,7 @@
     <header>
         <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #1C4CE1;">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <img src="{{ asset('/image/logo.png') }}" alt=""
                         style="width: 50%; height: auto; margin-left: 2px">
                 </a>
@@ -51,7 +51,8 @@
                         <a class="nav-item nav-link kritik&saran-link" href="/kritiksaran">Kritik & Saran</a>
                     </div>
                     <div class="navbar-nav ms-auto">
-                        <a class="nav-item nav-link" href="#">Masuk</a>
+                       {{-- button masuk/login --}}
+                       <a class="nav-item nav-link" href="#"></a>
                     </div>
                 </div>
             </div>
@@ -362,51 +363,35 @@
                     <div class="col-md-6 mb-4">
                         <div class="custom-card">
                             <h3>Workshop Monsoon</h3>
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+                            <p>Program workshop edukatif yang diadakan di berbagai SMA di Surabaya, bertujuan untuk mengenalkan dan mengajarkan Monsoonsim sebagai simulasi bisnis kepada para siswa.</p>
                         </div>
                     </div>
 
                     <div class="col-md-6 mb-4 ">
                         <div class="custom-card">
                             <h3>Studi Banding</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                            <p>Program studi banding dengan universitas lain yang bertujuan untuk memperluas wawasan dan mempererat hubungan antara mahasiswa Universitas Ciputra dengan mahasiswa dari berbagai universitas, baik di dalam maupun luar kampus.</p>
                         </div>
                     </div>
 
                     <div class="col-md-6 mb-4">
                         <div class="custom-card">
                             <h3>EPIC National</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                Ipsum has
-                                been the industry's
-                                standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                                type and
-                                scrambled it to
-                                make a type specimen book. It has survived not only five centuries, but also the
-                                leap into
-                                electronic typesetting,
-                                remaining essentially unchanged.</p>
+                            <p>Kompetisi nasional yang menyajikan tantangan melalui permainan Monsoonsim, rally games, dan escape room, khusus ditujukan bagi siswa SMA dan sederajat untuk mengembangkan kemampuan bisnis dan kerja tim.</p>
                         </div>
                     </div>
 
                     <div class="col-md-6 mb-4">
                         <div class="custom-card">
                             <h3>EPIC INTERNATIONAL</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                            <p>Kompetisi Monsoonsim tingkat internasional yang melibatkan peserta dari berbagai negara, khusus ditujukan untuk mahasiswa. Program ini berfokus pada kolaborasi global dan pengembangan kemampuan bisnis dalam lingkungan yang kompetitif.</p>
                         </div>
                     </div>
 
                     <div class="col-md-6 mb-4">
                         <div class="custom-card">
-                            <h3>ISB Care</h3>
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 mb-4">
-                        <div class="custom-card">
-                            <h3>Lomba Data Science</h3>
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+                            <h3>DASH</h3>
+                            <p>Kompetisi terbuka di bidang data science yang mendorong partisipasi dari masyarakat umum untuk mengasah keterampilan dalam analisis data, pemecahan masalah, dan inovasi.</p>
                         </div>
                     </div>
                 </div>
@@ -494,53 +479,45 @@
                     <div class="col-md-6 mb-4">
                         <div class="custom-card">
                             <h3>Prodi Day</h3>
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+                            <p>Program pengenalan program studi yang merupakan salah satu bagian dari kegiatan Orientation Week. Prodi Day diadakan dengan tujuan untuk memberikan informasi kepada mahasiswa baru mengenai program studi yang mereka pilih, termasuk kegiatan pembelajaran dan aktivitas lain yang terkait.</p>
                         </div>
                     </div>
 
                     <div class="col-md-6 mb-4 ">
                         <div class="custom-card">
-                            <h3>Orentation Camp</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                            <h3>O Camp</h3>
+                            <p>Kegiatan camp bagi mahasiswa baru yang bertujuan untuk mempererat hubungan antar mahasiswa serta mengasah soft skills peserta.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <div class="custom-card">
+                            <h3>Synergia Day</h3>
+                            <p>Kegiatan bonding untuk meningkatkan kebersamaan dan kekompakan para pengurus Student Union ISB. Diadakannya Synergia Day juga bertujuan untuk membangun motivasi para pengurus Student Union dan memberikan pengetahuan mengenai rencana program kerja selama satu periode.</p>
                         </div>
                     </div>
 
                     <div class="col-md-6 mb-4">
                         <div class="custom-card">
                             <h3>Dean's Cup</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has
-                                been the industry's
-                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                and
-                                scrambled it to
-                                make a type specimen book. It has survived not only five centuries, but also the leap
-                                into
-                                electronic typesetting,
-                                remaining essentially unchanged.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 mb-4">
-                        <div class="custom-card">
-                            <h3>Red Carpet Night</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 mb-4">
-                        <div class="custom-card">
-                            <h3>Bonding Day</h3>
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+                            <p>Kompetisi yang diadakan bagi mahasiswa-mahasiswi SIFT untuk mengembangkan potensi dan talenta para peserta, sekaligus untuk membangun rasa kekeluargaan.</p>
                         </div>
                     </div>
 
                     <div class="col-md-6 mb-4">
                         <div class="custom-card">
                             <h3>Inaguration Night</h3>
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+                            <p>Kegiatan inagurasi yang diadakan bagi mahasiswa-mahasiswi SIFT untuk memberikan kenangan yang berkesan sebelum wisuda. Kegiatan ini juga bertujuan untuk menjaga keakraban para peserta dan mengenalkan mereka kepada dunia kerja serta ikatan alumni.</p>
                         </div>
                     </div>
+
+                    <div class="col-md-6 mb-4">
+                        <div class="custom-card">
+                            <h3>Red Carpet Night</h3>
+                            <p>Acara penghargaan bagi para dosen, staff, dan mahasiswa SIFT untuk mengapresiasi dan memotivasi mereka agar dapat meraih prestasi.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -633,45 +610,22 @@
                 <div class="row row-proker">
                     <div class="col-md-6 mb-4">
                         <div class="custom-card">
-                            <h3>Daily Content</h3>
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 mb-4 ">
-                        <div class="custom-card">
-                            <h3>Public Relations</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                            <h3>Creative Content</h3>
+                            <p>Konten berupa foto/video kreatif, baik itu untuk tujuan edukasi maupun hiburan yang dikemas dengan lucu, seru, dan unik.</p>
                         </div>
                     </div>
 
                     <div class="col-md-6 mb-4">
                         <div class="custom-card">
-                            <h3>Monthly Podcast</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has
-                                been the industry's
-                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                and
-                                scrambled it to
-                                make a type specimen book. It has survived not only five centuries, but also the leap
-                                into
-                                electronic typesetting,
-                                remaining essentially unchanged.</p>
+                            <h3>ISBerpodcast</h3>
+                            <p>Program podcast yang bertujuan untuk menumbuhkan wawasan mahasiswa Universitas Ciputra di berbagai berbagai bidang dengan mengundang guest star yang berkompeten sesuai bidangnya.</p>
                         </div>
                     </div>
 
                     <div class="col-md-6 mb-4">
                         <div class="custom-card">
-                            <h3>Info Lomba</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 mb-4">
-                        <div class="custom-card">
-                            <h3>Birthday Post</h3>
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+                            <h3>Birthday Alert</h3>
+                            <p>Memperingati ulangtahun seluruh mahasiswa maupun dosen ISB melalui instagram @suisb_uc.</p>
                         </div>
                     </div>
 
@@ -740,15 +694,8 @@
                 <div class="row row-proker">
                     <div class="col-md-6 mb-4">
                         <div class="custom-card">
-                            <h3>Website SU</h3>
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 mb-4 ">
-                        <div class="custom-card">
-                            <h3>Coming Soon</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                            <h3>ISB Website Project</h3>
+                            <p>Membuat dan mengelola website SU ISB yang menyajikan informasi lengkap mengenai lomba, prestasi, program kerja, open recruitment, dan hal-hal lainya yang berkaitan seputar ISB.</p>
                         </div>
                     </div>
 
@@ -809,39 +756,17 @@
                     <div class="col-md-6 mb-4">
                         <div class="custom-card">
                             <h3>Seminar</h3>
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+                            <p>kegiatan seminar fundraising yang bertujuan untuk menggalang dana bagi kegiatan atau tujuan tertentu. Yang dimana nantinya topik seminar ini bisa memberikan manfaat edukatif bagi peserta melalui topik-topik yang inspiratif.</p>
                         </div>
                     </div>
 
                     <div class="col-md-6 mb-4 ">
                         <div class="custom-card">
-                            <h3>Penjualan Merch SU</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                            <h3>Kantin kejujuran</h3>
+                            <p>Konsep kantin yang mengutamakan kepercayaan, di mana pembeli diharapkan membayar barang yang mereka ambil secara mandiri tanpa pengawasan langsung dari penjual. Kantin ini menyediakan air minum dan bolpen yang sering dibutuhkan oleh anak-anak SIFT dan pembeli cukup membayar sesuai harga yang tertera.</p>
                         </div>
                     </div>
 
-                    <div class="col-md-6 mb-4">
-                        <div class="custom-card">
-                            <h3>Penjualan Pin</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has
-                                been the industry's
-                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                and
-                                scrambled it to
-                                make a type specimen book. It has survived not only five centuries, but also the leap
-                                into
-                                electronic typesetting,
-                                remaining essentially unchanged.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 mb-4">
-                        <div class="custom-card">
-                            <h3>Bazaar EPIC National</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -921,31 +846,15 @@
                 <div class="row row-proker">
                     <div class="col-md-6 mb-4">
                         <div class="custom-card">
-                            <h3>Workshop PDD Internal</h3>
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 mb-4 ">
-                        <div class="custom-card">
-                            <h3>Workshop PDD External</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                            <h3>Workshop PDD Synergia</h3>
+                            <p>Melakukan masterclass open for public, mengajarkan basic photography, videography, editing, photoshop, dll..</p>
                         </div>
                     </div>
 
                     <div class="col-md-6 mb-4">
                         <div class="custom-card">
                             <h3>Videoshoot &Photoshoot SU ISB</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has
-                                been the industry's
-                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                and
-                                scrambled it to
-                                make a type specimen book. It has survived not only five centuries, but also the leap
-                                into
-                                electronic typesetting,
-                                remaining essentially unchanged.</p>
+                            <p>melakukan photoshoot anggota-anggota SU, Pegasus Horizon, dan seluruh mahasiswa berprestasi ISB.</p>
                         </div>
                     </div>
 

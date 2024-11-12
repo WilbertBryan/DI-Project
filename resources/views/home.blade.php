@@ -29,7 +29,7 @@
     <header>
         <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #1C4CE1;">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <img src="{{ asset('/image/logo.png') }}" alt=""
                         style="width: 50%; height: auto; margin-left: 2px">
                 </a>
@@ -46,7 +46,8 @@
                         <a class="nav-item nav-link kritik&saran-link" href="/kritiksaran">Kritik & Saran</a>
                     </div>
                     <div class="navbar-nav ms-auto">
-                        <a class="nav-item nav-link" href="#">Masuk</a>
+                        {{-- button masuk/login --}}
+                        <a class="nav-item nav-link" href="#"></a>
                     </div>
                 </div>
             </div>

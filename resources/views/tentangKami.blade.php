@@ -31,7 +31,7 @@
     <header>
         <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #1C4CE1;">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <img src="{{asset('/image/logo.png')}}" alt=""  style="width: 50%; height: auto; margin-left: 2px">
                 </a>
                 <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -46,7 +46,8 @@
                         <a class="nav-item nav-link kritik&saran-link" href="/kritiksaran">Kritik & Saran</a>
                     </div>
                     <div class="navbar-nav ms-auto">
-                        <a class="nav-item nav-link" href="#">Masuk</a>
+                        {{-- button masuk/login --}}
+                        <a class="nav-item nav-link" href="#"></a>
                     </div>
                 </div>
             </div>
@@ -171,13 +172,13 @@
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    What is Lorem Ipsum?
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Aku mau join SU ISB, gimana caranya & kapan?
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Pendaftaran SU ISB periode 2025 akan dibuka bulan diantara bulan april-mei 2025. Detail mengenai pendaftaran akan diinformasikan di website ini dan instagram @suisb_uc, so stay tune ya!
                                 </div>
                             </div>
                         </div>
@@ -185,12 +186,12 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Why do we use it?
+                                    Apa saja benefit bergabung dengan SU ISB?
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    It is a long established fact that a reader will be distracted by the readable content.
+                                    Bergabung dengan SU ISB bukan hanya tentang pengalaman kerja praktik (KP), tetapi jauh lebih penting, yaitu kesempatan untuk memiliki dan bertumbuh bersama di keluarga baru yang sangat suportif dan saling mendukung. SU ISB dikenal dengan kekeluargaan yang sangat kuat, yang terus terjaga dari tahun ke tahun. Bahkan, pada tahun 2024, SU ISB dinobatkan sebagai THE BEST SU di Universitas Ciputra!
                                 </div>
                             </div>
                         </div>
@@ -198,12 +199,12 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Where can I get some?
+                                    Apakah saja proker proker SU ISB?
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    There are many variations of passages of Lorem Ipsum available.
+                                    Temen-temen bisa mengakses detail mengenai proker-proker yang diadakan oleh SU ISB di Halaman SU Details
                                 </div>
                             </div>
                         </div>
@@ -211,12 +212,12 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                    Where can I get some?
+                                    Bagaimana cara mendapatkan KP penelitian?
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    There are many variations of passages of Lorem Ipsum available.
+                                    Nah, buat temen-temen yang kepengen buat lulus dengan predikat cumlaude, salah satu syarat yang harus dipenuhi adalah KP penelitian. Selain KP penelitian, KP prestasi mahasiswa juga merupakan elemen penting sebagai salah satu syarat untuk predikat cumlaude. Untuk mendapatkan informasi-informasi seputar lomba dan kesempatan penelitian, temen-temen bisa rajin-rajin buka website SU ISB ya, dikarenakan kami akan mengupdate seluruh informasi mengenai hal ini di website ini, apabila hal yang ditanyakan, silahkan pergi ke halaman kritik & saran ya, kami dari SU ISB akan dengan senang hati menjawab pertanyaan kalian.
                                 </div>
                             </div>
                         </div>
@@ -224,12 +225,12 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingFive">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
-                                    Where can I get some?
+                                    Apa proker unggulan SU ISB?
                                 </button>
                             </h2>
                             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    There are many variations of passages of Lorem Ipsum available.
+                                    EPIC (Enterprise Resource Planning) dan Rally Games Competition adalah lomba seru yang diperuntukkan bagi siswa-siswi SMA. Kegiatan ini berhasil menarik perhatian bukan hanya puluhan, bahkan ratusan peserta dari seluruh Indonesia loh guys!
                                 </div>
                             </div>
                         </div>
