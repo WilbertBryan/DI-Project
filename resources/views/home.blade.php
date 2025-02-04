@@ -30,8 +30,7 @@
         <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #1C4CE1;">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="{{ asset('/image/logo.png') }}" alt=""
-                        style="width: 50%; height: auto; margin-left: 2px">
+                    <img src="{{ asset('/image/logo.png') }}" alt="Logo" class="navbar-logo">
                 </a>
                 <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
@@ -64,7 +63,7 @@
     <section id = "tentangkita">
         <div class = "tentangkita-left">
             <img src = "./image/tentangkita.png" alt = "logo tentangkita">
-            <h3 class="ml-1"style="">Best SU Universitas Ciputra 2023/2024.</h3>
+            <h3>Best SU Universitas Ciputra 2023/2024.</h3>
         </div>
         <div class = "tentangkita-right">
             <h4>Tentang Kita</h4>

@@ -32,7 +32,7 @@
         <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #1C4CE1;">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="{{asset('/image/logo.png')}}" alt=""  style="width: 50%; height: auto; margin-left: 2px">
+                    <img src="{{ asset('/image/logo.png') }}" alt="Logo" class="navbar-logo">
                 </a>
                 <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

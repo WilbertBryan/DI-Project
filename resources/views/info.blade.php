@@ -145,7 +145,7 @@
         <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #1C4CE1;">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="{{asset('/image/logo.png')}}" alt=""  style="width: 50%; height: auto; margin-left: 2px">
+                    <img src="{{ asset('/image/logo.png') }}" alt="Logo" class="navbar-logo">
                 </a>
                 <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -173,7 +173,7 @@
             <div class="carousel-inner">
                 @foreach($newinfo as $index => $info)
                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                        <img src="{{ asset('/image/info-image.png') }}" class="d-block w-100 fullscreen-image" alt="{{ $info->title }}">
+                        <img src="{{ asset('/image/Info-image.png') }}" class="d-block w-100 fullscreen-image" alt="{{ $info->title }}">
                         <div class="carousel-caption d-none d-md-block text-start">
                             <div class="blurredbackground">
                                 @if($info->category == 'open-recruitment')

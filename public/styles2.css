@@ -53,6 +53,12 @@ h5 {
     box-shadow: none; /* Remove box shadow */
     outline: none; /* Remove outline */
 }
+/* Ukuran logo di desktop */
+.navbar-logo {
+    width: 50%;
+    height: auto;
+    margin-left: 2px;
+}
 /* Apply the underline effect on hover */
 .navbar-nav .nav-link {
     text-decoration: none; /* Remove default underline */
@@ -88,6 +94,39 @@ h5 {
 @media (max-width: 1165px) {
     .navbar-nav .nav-link.active::before {
         width: 0%;
+    }
+}
+/* Saat navbar minimized di HP (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        height: 50px; /* Kurangi tinggi navbar */
+        padding: 5px 0; /* Kurangi padding agar lebih kompak */
+    }
+
+    .navbar-logo {
+        width: 40%; /* Kecilkan logo agar tetap proporsional */
+        margin-top: -8px;
+    }
+
+    .navbar-toggler {
+        margin-top: -8px;
+        padding: 4px 6px; /* Kecilkan tombol toggle */
+    }
+
+    .navbar-collapse {
+        margin-top:-11px;
+        margin-left:-20px;
+        margin-right:-20px;
+        background-color: #1C4CE1; /* Pastikan tetap terlihat jelas */ /* Berikan sedikit padding agar tidak terlalu rapat */
+        width: 100%;
+    }
+
+    .navbar-nav {
+        text-align: center; /* Tengahkan teks pada navbar dropdown */
+    }
+
+    .navbar-nav .nav-item {
+        padding: 8px 0; /* Kurangi padding antar item navbar */
     }
 }
 .fullscreen-image {

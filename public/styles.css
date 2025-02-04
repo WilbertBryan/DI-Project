@@ -102,6 +102,12 @@ h5 {
     z-index: 1;
     /* Ensure the active underline is below the hover effect */
 }
+/* Ukuran logo di desktop */
+.navbar-logo {
+    width: 50%;
+    height: auto;
+    margin-left: 2px;
+}
 
 @media (max-width: 1165px) {
     .navbar-nav .nav-link.active::before {
@@ -129,6 +135,40 @@ h5 {
         /* Ensure the image covers the container without distortion */
         display: block;
         /* Remove any unwanted space below the image */
+    }
+}
+
+/* Saat navbar minimized di HP (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        height: 50px; /* Kurangi tinggi navbar */
+        padding: 5px 0; /* Kurangi padding agar lebih kompak */
+    }
+
+    .navbar-logo {
+        width: 40%; /* Kecilkan logo agar tetap proporsional */
+        margin-top: -8px;
+    }
+
+    .navbar-toggler {
+        margin-top: -8px;
+        padding: 4px 6px; /* Kecilkan tombol toggle */
+    }
+
+    .navbar-collapse {
+        margin-top:-11px;
+        margin-left:-20px;
+        margin-right:-20px;
+        background-color: #1C4CE1;
+        width: 100%;
+    }
+
+    .navbar-nav {
+        text-align: center; /* Tengahkan teks pada navbar dropdown */
+    }
+
+    .navbar-nav .nav-item {
+        padding: 8px 0; /* Kurangi padding antar item navbar */
     }
 }
 
@@ -183,15 +223,26 @@ svg {
     gap: 32px;
 }
 
+/* Pastikan gambar dan teks di kiri tetap proporsional */
+.tentangkita-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Tengahkan elemen di dalamnya */
+    text-align: center;
+}
+
 .tentangkita-left img {
     width: 80%;
-    padding-left: 12.5rem;
+    max-width: 350px;
 }
+
 .tentangkita-left h3 {
-    padding-left: 12.5rem;
     font-size: 1.5vw;
     font-weight: 400;
+    margin-top: 10px;
+    text-align: center;
 }
+
 .tentangkita-right {
     padding-right: 60px;
 }
@@ -273,10 +324,10 @@ svg {
         justify-content: center;
     }
     .tentangkita-left h3 {
-        padding-left: 12.5rem;
-        margin-left: -20px;
-        font-size: 16px;
-        font-weight: 400;
+        font-size: 4vw;
+        margin-top: 10px;
+        padding-left: 5%;
+        text-align: center; /* Pastikan teks tetap sejajar tengah */
     }
 
     .tentangkita-right {
@@ -795,6 +846,19 @@ svg {
 .col-padding {
     padding-top: 10px;
     padding-bottom: 10px;
+}
+/* For smaller screens (mobile) */
+@media screen and (max-width: 768px) {
+    .detailsBox h1 {
+        font-size: 6vw; /* Larger font for small screens */
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+    .detailsBox h1 {
+        font-size: 7vw;
+    }
 }
 
 /* SU Details - DETAILS EACH DEPARTEMEN*/
